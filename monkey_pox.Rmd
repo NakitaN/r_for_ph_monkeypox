@@ -24,6 +24,7 @@ Import statement
 Use appropriate import function and package based on the type of file
 Utilize function arguments to control relevant components (i.e. change column types, column names, missing values, etc.)
 Document the import process
+
 Identify data types for 5+ data elements/columns/variables
 Identify 5+ data elements required for your specified scenario. If <5 elements are required to complete the analysis, please choose additional variables of interest in the data set to explore in this milestone.
 Utilize functions or resources in RStudio to determine the types of each data element (i.e. character, numeric, factor)
