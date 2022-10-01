@@ -47,7 +47,27 @@ Provide a basic description of the 5+ data elements
 Numeric: mean, median, range
 Character:  unique values/categories
 Or any other descriptives that will be useful to the analysis
-```{r}
+```{r,eucensus}
 clean_eu_census <- rename_with(eu_census, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
   select(c(-"flags",-"footnotes"))
 ```
+```{r,mpx}
+clean_mp_cases <- rename_with(mp_cases, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
+  select(c(-"source"))
+```
+```{r, popden}
+clean_pop_den <- rename_with(pop_den, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
+  select(c(-"dataflow", -"last_update", -"freq", -"obs_flag"))
+```
+```{r}
+clean_wrld_region <- filter(wrld_region, region == "Europe") %>%
+  select(c(-"alpha-3", -"iso_3166-2", -"intermediate-region"))
+```
+
+```{r}
+str(clean_pop_den)
+str(clean_eu_census)
+str(clean_mp_cases)
+str(clean_wrld_region)
+```
+
