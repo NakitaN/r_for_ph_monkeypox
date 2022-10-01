@@ -1,0 +1,34 @@
+---
+title: "Monkeypox"
+output: pdf_document
+date: '2022-10-01'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Description of dataset
+What is the data source? (1-2 sentences on where the data is coming from, dates included, etc.)
+The data is about the Monkey case data is from European Centre for Disease Prevention and Control
+The population denominator and census data is from Eurostat
+
+How does the dataset relate to the group problem statement and question?
+Is there a difference between monkeypox cases by region in the EU
+We will be using the monkeypox case rate, population denominator and region data set to help us find the difference betwen monkeypox cases by region in the EU.
+Is there a difference between country level monkeypox case rates by certain demographic factors?
+We will use the monkeypox case, poplation denominator and census data to see if there is a difference between country level case rates based on certain demographic factors.
+
+\newpage
+
+Import statement
+Use appropriate import function and package based on the type of file
+Utilize function arguments to control relevant components (i.e. change column types, column names, missing values, etc.)
+Document the import process
+Identify data types for 5+ data elements/columns/variables
+Identify 5+ data elements required for your specified scenario. If <5 elements are required to complete the analysis, please choose additional variables of interest in the data set to explore in this milestone.
+Utilize functions or resources in RStudio to determine the types of each data element (i.e. character, numeric, factor)
+Identify the desired type/format for each variable—will you need to convert any columns to numeric or another type? 
+Provide a basic description of the 5+ data elements
+Numeric: mean, median, range
+Character:  unique values/categories
+Or any other descriptives that will be useful to the analysis
