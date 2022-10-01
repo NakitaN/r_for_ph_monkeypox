@@ -24,7 +24,21 @@ Import statement
 Use appropriate import function and package based on the type of file
 Utilize function arguments to control relevant components (i.e. change column types, column names, missing values, etc.)
 Document the import process
+1, We navigated to the PHW290/phw251_projectdata git repo. We clicked on Code and downloaded the Zip file which we then extracted the csv files from. We imported the relevant datasets into our RStudio files for this project.
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+```
+```{r}
+mp_cases <-read_csv("~/r_for_ph_monkeypox/euro_mpx_cases.csv")
+pop_den <- read_csv("~/r_for_ph_monkeypox/euro_pop_denominators.csv")
+eu_census <- read_csv("euro_census_stats.csv")
+wrld_region <- read_csv("~/r_for_ph_monkeypox/world_country_regions.csv")
+```
 
+
+\newpage
 Identify data types for 5+ data elements/columns/variables
 Identify 5+ data elements required for your specified scenario. If <5 elements are required to complete the analysis, please choose additional variables of interest in the data set to explore in this milestone.
 Utilize functions or resources in RStudio to determine the types of each data element (i.e. character, numeric, factor)
@@ -33,3 +47,7 @@ Provide a basic description of the 5+ data elements
 Numeric: mean, median, range
 Character:  unique values/categories
 Or any other descriptives that will be useful to the analysis
+```{r}
+clean_eu_census <- rename_with(eu_census, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
+  select(c(-"flags",-"footnotes"))
+```
