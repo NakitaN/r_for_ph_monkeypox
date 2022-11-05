@@ -31,6 +31,7 @@ library(readr)
 library(dplyr)
 library(tidyverse)
 library(stringr)
+library(lubridate)
 ```
 Use appropriate import function and package based on the type of file
 ```{r}
@@ -111,6 +112,41 @@ We will use the countrycode/geo/country_code columns which are listed in all dat
 Please turn in a PDF created from an Rmd with the following components -
 
 Subset rows or columns, as needed
+```{r}
+unique(clean_mp_cases$countrycode)
+unique(clean_pop_den$geo)
+
+```
+```{r}
+pop_den_geo <- filter(clean_pop_den,geo %in% c("AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", 
+                                               "FI", "FR","DE", "EL", "HU","IS", "IE" ,"IT", "LV", 
+                                               "LT","LU", "MT", "NL", "NO","PL", "PT", "RO", "SK", "SI", "ES", "SE"),time_period == 2022) %>%
+                        select(-indic_de)
+```
+
+```{r}
+date_mp_cases <- clean_mp_cases %>%
+   group_by(countrycode, countryexp, month = floor_date(daterep, 'month')) %>%
+    summarize(monthly_total_cases = sum(confcases))
+
+
+```
+```{r}
+join_df <- left_join(pop_den_geo, date_mp_cases, by = c("geo" = "countrycode"))
+```
+```{r}
+join_df$countryexp <- str_to_upper(join_df$countryexp)
+```
+```{r}
+regions_df <-clean_wrld_region %>%
+  select(name, `sub-region`)
+```
+```{r}
+join_region_mp <- inner_join(regions_df, join_df, by = c("name" = "countryexp"))
+```
+
+
+
 Create new variables needed for analysis (minimum 2)
 New variables should be created based on existing columns; for example
 Calculating a rate
