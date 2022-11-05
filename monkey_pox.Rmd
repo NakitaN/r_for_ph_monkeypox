@@ -1,6 +1,7 @@
 ---
 title: "Monkeypox"
 output: pdf_document
+author: "Susan Awor and Nakita Nicholls"
 date: '2022-10-01'
 ---
 
@@ -23,7 +24,7 @@ We will use the monkeypox case, population denominator and census data to see if
 
 \newpage
 
-#Import statement
+# Import statement
 
 ```{r}
 library(readr)
@@ -62,7 +63,7 @@ Document the import process
 
 
 \newpage
-#Identify data types for 5+ data elements/columns/variables
+# Identify data types for 5+ data elements/columns/variables
 Identify 5+ data elements required for your specified scenario. If <5 elements are required to complete the analysis, please choose additional variables of interest in the data set to explore in this milestone.
 
 daterep = date
@@ -87,7 +88,7 @@ str(clean_wrld_region)
 ```
 
 \newpage
-#Provide a basic description of the 5+ data elements
+# Provide a basic description of the 5+ data elements
 Numeric: mean, median, range
 Character:  unique values/categories
 Or any other descriptives that will be useful to the analysis
@@ -105,3 +106,28 @@ We will use the eu census dataset to look at the age and education demographic(c
 
 
 We will use the countrycode/geo/country_code columns which are listed in all datasets to join our datasets as needed in the future milestone(s).
+
+\newpage
+Please turn in a PDF created from an Rmd with the following components -
+
+Subset rows or columns, as needed
+Create new variables needed for analysis (minimum 2)
+New variables should be created based on existing columns; for example
+Calculating a rate
+Combining character strings
+If no new values are needed for final tables/graphs, please create 2 new variables anyway
+Clean variables needed for analysis (minimum 2)
+Examples
+Recode invalid values
+Handle missing fields
+Recode categories
+If not needed for final analysis, please create at least 2 new variables anyway
+Data dictionary based on clean dataset (minimum 4 data elements), including:
+Variable name
+Data type
+Description
+One or more tables with descriptive statistics for 4 data element
+PDF that is professionally prepared for presentation
+Each part of the milestone is clearly on one page (use \newpage to push to a new page)
+Only the necessary information is outputted (you should suppress, for example, entire data frame outputs)
+Use of headers and sub headers to create an organized document
