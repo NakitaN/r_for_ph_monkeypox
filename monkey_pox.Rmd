@@ -145,7 +145,7 @@ regions_df <-clean_wrld_region %>%
 join_region_mp <- inner_join(regions_df, join_df, by = c("name" = "countryexp"))
 ```
 
-
+testing123
 
 Create new variables needed for analysis (minimum 2)
 New variables should be created based on existing columns; for example
