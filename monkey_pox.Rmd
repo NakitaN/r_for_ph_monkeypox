@@ -142,7 +142,8 @@ regions_df <-clean_wrld_region %>%
   select(name, `sub-region`)
 ```
 ```{r}
-join_region_mp <- inner_join(regions_df, join_df, by = c("name" = "countryexp"))
+join_region_mp <- inner_join(regions_df, join_df, by = c("name" = "countryexp"))%>%
+  mutate(rate = round(monthly_total_cases/obs_value * 100000,3))
 ```
 ```{r}
 eu_cens_demo <- clean_eu_census %>% 
@@ -151,7 +152,42 @@ eu_cens_demo <- clean_eu_census %>%
 ```
 ```{r}
 rate_region_mp <- join_region_mp %>%
-  mutate(rate = round(monthly_total_cases/obs_value * 100000,3))
+  group_by(`sub-region`,month)%>%
+  summarize(sum_rate = sum(rate))%>%
+  ungroup()
+
+```
+```{r}
+ggplot(rate_region_mp, aes(x=month, y=sum_rate)) + 
+  geom_bar(stat = "identity")+
+  facet_wrap(~ `sub-region`) +
+  labs(title = "Monthly Monkey rates by EU region ")
+
+  
+```
+Data dictionary based on clean dataset (minimum 4 data elements), including:
+join_region_mp dataset
+ Name :month
+ Data type: DATE
+ Description: A grouping of the of all the dates in the month and is listed as for example "2022-05-01". It includes all the days in that respective month. 
+ 
+ Name: monthly_total_cases
+ Data type: numeric
+ Description: The sum of monthly monkeypox cases per country.
+ 
+ Name: rate
+ Data type: numeric
+ Description: The rate is the number of monthly total cases divided by the obs_value per 100000, rounded to 3 decimal places.
+ 
+ rate_region_mp dataset
+ 
+ Name: sum_rate
+ Data type: numeric
+ Description: The sum monthly rate of monkeypox cases in each sub-region.
+
+
+```{r}
+str(join_region_mp)
 ```
 
 ```{r}
@@ -180,8 +216,8 @@ rate_region_mp <- join_region_mp %>%
 ```
 
 ```{r}
-join_cens_mp <- left_join(eu_cens_demo, join_region_mp, by = c("country_code" = "geo"))%>%
-  group_by(sex, monthly_total_cases)
+# join_cens_mp <- left_join(eu_cens_demo, join_region_mp, by = c("country_code" = "geo"))%>%
+#   group_by(sex, monthly_total_cases)
 
 ```
 ```{r}

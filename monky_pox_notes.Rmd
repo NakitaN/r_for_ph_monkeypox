@@ -1,0 +1,39 @@
+---
+title: "Monkeypc note"
+output: pdf_document
+date: '2022-11-06'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+# eu_census_demo_clean <- eu_cens_demo %>%
+#   mutate(age_ord = recode(age, "Y_LT15" = "1",
+#                               "Y15-29" = "2",
+#                               "Y30-49" = "3",
+#                               "Y50-64" = "4",
+#                               "Y65-84" = "5",
+#                               "Y_GE85" = "6"))
+
+# eu_census_demo_clean <- eu_cens_demo %>%
+#    mutate(age_cat = case_when(age == "Y_LT15" ~ "Younger than 15",
+#                               age == "Y15-29" ~ "Age 15-29",
+#                               age == "Y30-49" ~ "Age 30-49",
+#                               age == "Y50-64" ~ "Age 50-64",
+#                               age == "Y65-84" ~ "Age 65-85",
+#                               age == "Y_GE85" ~ "85 and Older"))
+
+# eu_census_demo_clean$age_cat <- factor(eu_census_demo_clean$age_cat,
+# levels = c("Younger than 15","Age 15-29","Age 30-49","Age 50-64","Age 65-85","85 and Older"), #"2","3","1","4","5"
+# #labels = c("Staten Island","Manhattan",
+# #"Bronx", "Queens", "Brooklyn"),
+# ordered=TRUE)
+
+```
+
+```{r}
+# join_cens_mp <- left_join(eu_cens_demo, join_region_mp, by = c("country_code" = "geo"))%>%
+#   group_by(sex, monthly_total_cases)
+
+```
