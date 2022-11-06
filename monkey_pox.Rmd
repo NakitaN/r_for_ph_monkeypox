@@ -8,7 +8,8 @@ date: '2022-10-01'
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Description of dataset
+# Milestone 2
+## Description of dataset
 What is the data source? (1-2 sentences on where the data is coming from, dates included, etc.)
 
 The monkeypox case data is from European Centre for Disease Prevention and Control.
@@ -32,6 +33,7 @@ library(dplyr)
 library(tidyverse)
 library(stringr)
 library(lubridate)
+library(knitr)
 ```
 Use appropriate import function and package based on the type of file
 ```{r}
@@ -64,7 +66,7 @@ Document the import process
 
 
 \newpage
-# Identify data types for 5+ data elements/columns/variables
+## Identify data types for 5+ data elements/columns/variables
 Identify 5+ data elements required for your specified scenario. If <5 elements are required to complete the analysis, please choose additional variables of interest in the data set to explore in this milestone.
 
 daterep = date
@@ -89,7 +91,7 @@ str(clean_wrld_region)
 ```
 
 \newpage
-# Provide a basic description of the 5+ data elements
+## Provide a basic description of the 5+ data elements
 Numeric: mean, median, range
 Character:  unique values/categories
 Or any other descriptives that will be useful to the analysis
@@ -109,9 +111,10 @@ We will use the eu census dataset to look at the age and education demographic(c
 We will use the countrycode/geo/country_code columns which are listed in all datasets to join our datasets as needed in the future milestone(s).
 
 \newpage
-Please turn in a PDF created from an Rmd with the following components -
+# Milestone 3
 
-Subset rows or columns, as needed
+
+## Subset rows or columns,create new varbiables and clean
 ```{r}
 unique(clean_mp_cases$countrycode)
 unique(clean_pop_den$geo)
@@ -120,7 +123,8 @@ unique(clean_pop_den$geo)
 ```{r}
 pop_den_geo <- filter(clean_pop_den,geo %in% c("AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", 
                                                "FI", "FR","DE", "EL", "HU","IS", "IE" ,"IT", "LV", 
-                                               "LT","LU", "MT", "NL", "NO","PL", "PT", "RO", "SK", "SI", "ES", "SE"),time_period == 2022) %>%
+                                               "LT","LU", "MT", "NL", "NO","PL", "PT", "RO", "SK",
+                                               "SI", "ES", "SE"),time_period == 2022) %>%
                         select(-indic_de)
 ```
 
@@ -162,87 +166,56 @@ ggplot(rate_region_mp, aes(x=month, y=sum_rate)) +
   geom_bar(stat = "identity")+
   facet_wrap(~ `sub-region`) +
   labs(title = "Monthly Monkey rates by EU region ")
-
   
 ```
-Data dictionary based on clean dataset (minimum 4 data elements), including:
-join_region_mp dataset
- Name :month
- Data type: DATE
- Description: A grouping of the of all the dates in the month and is listed as for example "2022-05-01". It includes all the days in that respective month. 
- 
- Name: monthly_total_cases
- Data type: numeric
- Description: The sum of monthly monkeypox cases per country.
- 
- Name: rate
- Data type: numeric
- Description: The rate is the number of monthly total cases divided by the obs_value per 100000, rounded to 3 decimal places.
- 
- rate_region_mp dataset
- 
- Name: sum_rate
- Data type: numeric
- Description: The sum monthly rate of monkeypox cases in each sub-region.
-
-
 ```{r}
-str(join_region_mp)
+
+sum_obs_value <- join_region_mp %>%
+  group_by(`sub-region`)%>%
+  summarize(sum_obs = sum(obs_value))
 ```
 
+\newpage
+## Data dictionary based on clean dataset (minimum 4 data elements), including:
+
+### Data Dictionary
+ **Dataset name:join_region_mp**
+
+- Name :month
+- Data type: DATE
+- Description: A grouping of the of all the dates in the month and is listed as for example "2022-05-01". It includes all the days in that respective month. 
+ 
+- Name: monthly_total_cases
+- Data type: numeric
+- Description: The sum of monthly monkeypox cases per country.
+ 
+- Name: rate
+- Data type: numeric
+- Description: The rate is the number of monthly total cases divided by the obs_value per 100000, rounded to 3 decimal places.
+ 
+ **Dataset name: rate_region_mp**
+ 
+- Name: sum_rate
+- Data type: numeric
+- Description: The sum monthly rate of monkeypox cases in each sub-region.
+
+\newpage
+## Table
 ```{r}
-# eu_census_demo_clean <- eu_cens_demo %>%
-#   mutate(age_ord = recode(age, "Y_LT15" = "1",
-#                               "Y15-29" = "2",
-#                               "Y30-49" = "3",
-#                               "Y50-64" = "4",
-#                               "Y65-84" = "5",
-#                               "Y_GE85" = "6"))
-
-# eu_census_demo_clean <- eu_cens_demo %>%
-#    mutate(age_cat = case_when(age == "Y_LT15" ~ "Younger than 15",
-#                               age == "Y15-29" ~ "Age 15-29",
-#                               age == "Y30-49" ~ "Age 30-49",
-#                               age == "Y50-64" ~ "Age 50-64",
-#                               age == "Y65-84" ~ "Age 65-85",
-#                               age == "Y_GE85" ~ "85 and Older"))
-
-# eu_census_demo_clean$age_cat <- factor(eu_census_demo_clean$age_cat,
-# levels = c("Younger than 15","Age 15-29","Age 30-49","Age 50-64","Age 65-85","85 and Older"), #"2","3","1","4","5"
-# #labels = c("Staten Island","Manhattan",
-# #"Bronx", "Queens", "Brooklyn"),
-# ordered=TRUE)
-
+summary(join_region_mp$monthly_total_cases)
+summary(join_region_mp$rate)
+summary(rate_region_mp$sum_rate)
+summary(sum_obs_value$sum_obs)
 ```
-
 ```{r}
-# join_cens_mp <- left_join(eu_cens_demo, join_region_mp, by = c("country_code" = "geo"))%>%
-#   group_by(sex, monthly_total_cases)
+library(kableExtra)
+df_ds <- data.frame("Median" = c(13.5, 0.24450, 3.3385,446101430),
+                    "Mean" = c(152.4, 0.68122, 4.7686, 451725616),
+                    row.names = c("Monthly total cases", "Rate", 
+                                  "Summary rate", "Obs value"))
+kable(df_ds,booktabs=T, digits= c(1,1,1,0),
+ caption = "Descriptive statistics for data elements")
 
-```
-```{r}
 
 ```
 
-
-
-Create new variables needed for analysis (minimum 2)
-New variables should be created based on existing columns; for example
-Calculating a rate
-Combining character strings
-If no new values are needed for final tables/graphs, please create 2 new variables anyway
-Clean variables needed for analysis (minimum 2)
-Examples
-Recode invalid values
-Handle missing fields
-Recode categories
-If not needed for final analysis, please create at least 2 new variables anyway
-Data dictionary based on clean dataset (minimum 4 data elements), including:
-Variable name
-Data type
-Description
-One or more tables with descriptive statistics for 4 data element
-PDF that is professionally prepared for presentation
-Each part of the milestone is clearly on one page (use \newpage to push to a new page)
-Only the necessary information is outputted (you should suppress, for example, entire data frame outputs)
-Use of headers and sub headers to create an organized document
