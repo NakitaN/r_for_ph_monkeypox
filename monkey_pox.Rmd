@@ -3,6 +3,7 @@ title: "Monkeypox"
 output: pdf_document
 author: "Susan Awor and Nakita Nicholls"
 date: '2022-10-01'
+always_allow_html: true
 ---
 
 ```{r setup, include=FALSE}
@@ -46,7 +47,7 @@ wrld_region <- read_csv("~/r_for_ph_monkeypox/world_country_regions.csv")
 Utilize function arguments to control relevant components (i.e. change column types, column names, missing values, etc.)
 ```{r,eucensus}
 clean_eu_census <- rename_with(eu_census, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
-  select(c(-"flags",-"footnotes"))
+  select(c(-"flags",-"footnotes", -"cas",-"edu"))
 ```
 ```{r,mpx}
 clean_mp_cases <- rename_with(mp_cases, ~ tolower((gsub(" ", "_",.x,fixed=TRUE)))) %>%
@@ -131,7 +132,7 @@ pop_den_geo <- filter(clean_pop_den,geo %in% c("AT", "BE", "BG", "HR", "CY", "CZ
 ```{r}
 date_mp_cases <- clean_mp_cases %>%
    group_by(countrycode, countryexp, month = floor_date(daterep, 'month')) %>%
-    summarize(monthly_total_cases = sum(confcases))
+    summarize(monthly_total_cases = sum(confcases, na.rm = T))
 
 
 ```
@@ -149,11 +150,7 @@ regions_df <-clean_wrld_region %>%
 join_region_mp <- inner_join(regions_df, join_df, by = c("name" = "countryexp"))%>%
   mutate(rate = round(monthly_total_cases/obs_value * 100000,3))
 ```
-```{r}
-eu_cens_demo <- clean_eu_census %>% 
-  group_by(country_code, time, sex)%>%
-  summarize(sum_pop = sum(pop))
-```
+
 ```{r}
 rate_region_mp <- join_region_mp %>%
   group_by(`sub-region`,month)%>%
@@ -217,5 +214,59 @@ kable(df_ds,booktabs=T, digits= c(1,1,1,0),
  caption = "Descriptive statistics for data elements")
 
 
+```
+
+\newpage
+
+# Milestone 4
+```{r}
+eu_cens_demo <- clean_eu_census %>% 
+  mutate(res_size_cat = case_when(res_pop %in% c("0-1000", "1000-9999", "10000-99999") ~ "small",
+                                  res_pop %in% c("100000-199999","200000-499999") ~ "medium",
+                                  res_pop %in% c("500000-999999", "GE1000000") ~ "large",
+                                   TRUE ~ "unknown"))%>%
+  group_by(country_code, res_size_cat) %>%
+  summarize(group_pop = sum(pop, na.rm = T)) %>%
+  mutate(country_pop = sum(group_pop, na.rm = T),
+         group_pct = group_pop/ country_pop) %>%
+  ungroup() %>%
+  filter(res_size_cat == "small") %>%
+mutate(pct_small = case_when(group_pct >= 0.80 ~ "Greater than 80% in Small Cities",
+                               group_pct >= 0.65 ~ "Between 65% and 80% in Small Cities",
+                               group_pct < 0.65 ~ "Less than 65% in Small Cities"))
+
+res_size <- left_join(eu_cens_demo, join_region_mp, by = c("country_code" = "geo")) %>%
+  group_by(country_code, pct_small, month, `sub-region`) %>%
+  summarize(cases_by_monthcat = sum(monthly_total_cases, na.rm = T),
+            cat_pop = max(country_pop, na.rm = T)) %>%
+  mutate(size_cat_rate = (cases_by_monthcat / cat_pop) * 1000000) %>%
+  ungroup()
+
+
+library(plotly)
+
+plot_ly(res_size, x = ~month, y = ~size_cat_rate, 
+        type = "bar", 
+        mode = "lines", 
+        linetype = ~pct_small) %>%
+  layout(title = "MPX Case Rates in Europe by Percent of Population Living in Small Cities, May-August 2022", xaxis = list(title = "Month", dtick = "M1", ticketformat = "%b<br>%Y"), 
+         yaxis = list(title = "Case Rate per 1000000"))
+
+```
+The monthly monkeypox case rates between May 2022 and August 2022 were highest in countries where greater than 80% of the population lived in small cities.
+
+```{r}
+eu_census_age_demo <- clean_eu_census %>%
+  mutate(age_cat = case_when(age == "Y_LT15" ~ "Younger than 15",
+                              age %in% c("Y15-29","Y30-49")  ~ "Between 15 to 49",
+                              age %in% c("Y50-64","Y65-84", "Y_GE85") ~ "50 and Older"))%>%
+  group_by(country_code, age_cat) %>%
+  summarize(group_pop1 = sum(pop, na.rm = T)) %>%
+  mutate(country_pop1 = sum(group_pop1, na.rm = T),
+         group_pct1 = group_pop1 / country_pop1) %>%
+  ungroup()
+
+  age_mp_cases <- left_join(eu_census_age_demo, join_region_mp, by = c("country_code" = "geo")) %>%
+     group_by(country_code, group_pct1, month, `sub-region`,age_cat)
 ```
 
