@@ -228,10 +228,15 @@ rate_region_mp <- join_region_mp %>%
   summarize(sum_rate = sum(rate))%>%
   ungroup()
 
-ggplot(rate_region_mp, aes(x=month, y=sum_rate)) + 
-  geom_bar(stat = "identity",fill = "red")+
+ggplot(rate_region_mp, aes(x=month, y=sum_rate, fill = as.factor(month))) + 
+  geom_bar(stat = "identity")+
   facet_wrap(~ `sub-region`) +
-  labs(title = "Monthly Monkey Rates by EU region ",x= "Month", y ="Case rates")
+  labs(title = "Monthly Monkey Rates by EU region ",
+       x= "Month",
+       y ="Case rates", fill = "Month")+
+  theme(
+    plot.title = element_text(hjust = 0.5))+
+  scale_fill_hue(labels = c("May", "June", "July","August"))
 
 ```
 
@@ -245,13 +250,13 @@ pivot_rate_region_mp <- rate_region_mp %>%
   pivot_wider(names_from = `sub-region`, values_from = sum_rate)
 
 library(formattable)
-table_case_region <- formattable(pivot_rate_region_mp, align=c("l","c","c","c","r"),
+formattable(pivot_rate_region_mp, align=c("l","c","c","c","r"),
             list("Western Europe"= (color_tile("white", "orange"))))
  
 ```
-The table shows the case rates in different European regions between the months of May and August 2022. Wester Europe had the highest case rates in the month of July.
+The table shows the case rates in different European regions between the months of May and August 2022. Western Europe had the highest case rates in the month of July.
 \newpage
-```{r message=FALSE}
+```{r }
 eu_cens_demo <- clean_eu_census %>% 
   mutate(res_size_cat = case_when(res_pop %in% c("0-1000", "1000-9999", "10000-99999") ~ "small",
                                   res_pop %in% c("100000-199999","200000-499999") ~ "medium",
@@ -283,13 +288,14 @@ plot_ly(res_size,
         x = ~month, 
         y = ~size_cat_rate, 
         type = "bar", 
-        linetype = ~pct_small) %>%
-  layout(title = "MPX Case Rates in Europe by Percent of Population Living in Small Cities, May-August 2022", xaxis = list(title = "Month", dtick = "M1", ticketformat = "%b<br>%Y"), 
+        color = ~pct_small) %>%
+  layout(title = "MPX Case Rates in Europe by Percent of Population Living in Small Cities, May-August 2022", 
+         xaxis = list(title = "Month"), 
          yaxis = list(title = "Case Rate per 1000000"))
 
 
 ```
-This graph shows the case rates in Europe by the percent of the population living in small cities between the months of May to August 2022. The monthly monkeypox case rates between May 2022 and August 2022 were highest in countries where greater than 80% of the population lived in small cities.
+This graph shows the case rates in Europe by the percent of the population living in small cities between the months of May to August 2022. The monthly monkeypox case rates peaked in July 2022 and paticularly in countries where greater than 80% of the population lived in small cities.
 
 \newpage
 ```{r, Employment}
@@ -313,12 +319,12 @@ eu_cens_eco <- clean_eu_census %>%
    mutate(size_emp_rate = (cases_by_monthcat /employ_pop) * 1000000) %>%
    ungroup()
  
-   plot_ly(
+plot_ly(
    emp_mp,
    x= ~month,
    y= ~size_emp_rate,
-   linetype = ~pct_employ,
-   type = "bar") %>%
+   type = "bar",
+   color = ~pct_employ) %>%
    layout(title = "MPX Case Rates in Europe by Percent Employed, May-August 2022",
   xaxis = list(title = "Month"),
   yaxis = list(title = "Case Rate per 1000000"))
