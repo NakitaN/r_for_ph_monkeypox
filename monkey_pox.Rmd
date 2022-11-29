@@ -289,7 +289,8 @@ plot_ly(res_size,
         y = ~size_cat_rate, 
         type = "bar", 
         color = ~pct_small) %>%
-  layout(title = "MPX Case Rates in Europe by Percent of Population Living in Small Cities, May-August 2022", 
+  layout(title = "MPX Case Rates in Europe by Percent of Population Living in Small Cities,
+         May-August 2022",  
          xaxis = list(title = "Month"), 
          yaxis = list(title = "Case Rate per 1000000"))
 
