@@ -1,0 +1,33 @@
+"","country_code","res_size_cat","group_pop","country_pop","group_pct","pct_small"
+"1","AT","small",8241288,12673495,0.650277449117233,"Between 65% and 80% in Small Cities"
+"2","BE","small",4804911,15834698,0.303441909659407,"Less than 65% in Small Cities"
+"3","BG","small",6936046,10694003,0.648592112794433,"Less than 65% in Small Cities"
+"4","CH","small",9339364,10871563,0.859063595547393,"Greater than 80% in Small Cities"
+"5","CY","small",1105450,1257135,0.879340723152247,"Greater than 80% in Small Cities"
+"6","CZ","small",11994619,15475743,0.775059329946226,"Between 65% and 80% in Small Cities"
+"7","DE","small",0,0,NA,NA
+"8","DK","small",0,0,NA,NA
+"9","EE","small",1319075,1924556,0.685391851419236,"Between 65% and 80% in Small Cities"
+"10","EL","small",12727840,15402922,0.826326329510725,"Greater than 80% in Small Cities"
+"11","ES","small",0,0,NA,NA
+"12","FI","small",4748895,7969190,0.59590686129958,"Less than 65% in Small Cities"
+"13","FR","small",79941699,94579132,0.845236124603047,"Greater than 80% in Small Cities"
+"14","HR","small",4644109,6080104,0.76382065175201,"Between 65% and 80% in Small Cities"
+"15","HU","small",10149353,14448848,0.702433370466628,"Between 65% and 80% in Small Cities"
+"16","IE","small",4826937,6774556,0.712509720194209,"Between 65% and 80% in Small Cities"
+"17","IS","small",0,0,NA,NA
+"18","IT","small",0,0,NA,NA
+"19","LI","small",55840,55840,1,"Greater than 80% in Small Cities"
+"20","LT","small",0,0,NA,NA
+"21","LU","small",733111,733111,1,"Greater than 80% in Small Cities"
+"22","LV","small",2085867,3095886,0.673754459951045,"Between 65% and 80% in Small Cities"
+"23","MT","small",602515,602515,1,"Greater than 80% in Small Cities"
+"24","NL","small",0,0,NA,NA
+"25","NO","small",0,0,NA,NA
+"26","PL","small",39641163,55563231,0.713442366229566,"Between 65% and 80% in Small Cities"
+"27","PT","small",13355113,15585545,0.85689098456294,"Greater than 80% in Small Cities"
+"28","RO","small",20904807,29301750,0.713432030510123,"Between 65% and 80% in Small Cities"
+"29","SE","small",0,0,NA,NA
+"30","SI","small",2598091,2994758,0.867546225771832,"Greater than 80% in Small Cities"
+"31","SK","small",7043725,8027088,0.877494428863867,"Greater than 80% in Small Cities"
+"32","UK","small",40558415,95624460,0.424142682740378,"Less than 65% in Small Cities"

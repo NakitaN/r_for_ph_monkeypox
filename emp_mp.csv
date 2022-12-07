@@ -1,0 +1,113 @@
+"","country_code","pct_employ","month","sub-region","cases_by_monthcat","employ_pop","size_emp_rate"
+"1","AT","Greater than 30% is Employed",2022-05-01,"Western Europe",2,12673495,0.157809664974027
+"2","AT","Greater than 30% is Employed",2022-06-01,"Western Europe",36,12673495,2.84057396953248
+"3","AT","Greater than 30% is Employed",2022-07-01,"Western Europe",96,12673495,7.57486391875327
+"4","AT","Greater than 30% is Employed",2022-08-01,"Western Europe",97,12673495,7.65376875124029
+"5","BE","Between 25% and 30% is Employed",2022-05-01,"Western Europe",16,15834698,1.01043922656435
+"6","BE","Between 25% and 30% is Employed",2022-06-01,"Western Europe",127,15834698,8.0203613608545
+"7","BE","Between 25% and 30% is Employed",2022-07-01,"Western Europe",351,15834698,22.1665105327553
+"8","BE","Between 25% and 30% is Employed",2022-08-01,"Western Europe",177,15834698,11.1779839438681
+"9","BG","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",0,10694003,0
+"10","BG","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",3,10694003,0.280531060258726
+"11","BG","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",1,10694003,0.0935103534195754
+"12","BG","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",0,10694003,0
+"13","CZ","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",1,15475743,0.0646172529486953
+"14","CZ","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",7,15475743,0.452320770640867
+"15","CZ","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",15,15475743,0.969258794230429
+"16","CZ","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",18,15475743,1.16311055307651
+"17","DE",NA,2022-05-01,"Western Europe",53,0,Inf
+"18","DE",NA,2022-06-01,"Western Europe",1071,0,Inf
+"19","DE",NA,2022-07-01,"Western Europe",1619,0,Inf
+"20","DE",NA,2022-08-01,"Western Europe",586,0,Inf
+"21","DK",NA,2022-05-01,"Northern Europe",10,0,Inf
+"22","DK",NA,2022-06-01,"Northern Europe",25,0,Inf
+"23","DK",NA,2022-07-01,"Northern Europe",64,0,Inf
+"24","DK",NA,2022-08-01,"Northern Europe",70,0,Inf
+"25","EE","Between 25% and 30% is Employed",2022-05-01,"Northern Europe",0,1924556,0
+"26","EE","Between 25% and 30% is Employed",2022-06-01,"Northern Europe",1,1924556,0.519600364967296
+"27","EE","Between 25% and 30% is Employed",2022-07-01,"Northern Europe",3,1924556,1.55880109490189
+"28","EE","Between 25% and 30% is Employed",2022-08-01,"Northern Europe",6,1924556,3.11760218980378
+"29","EL","Less than 25% is Employed",2022-05-01,"Southern Europe",1,15402922,0.0649227464762855
+"30","EL","Less than 25% is Employed",2022-06-01,"Southern Europe",6,15402922,0.389536478857713
+"31","EL","Less than 25% is Employed",2022-07-01,"Southern Europe",26,15402922,1.68799140838342
+"32","EL","Less than 25% is Employed",2022-08-01,"Southern Europe",19,15402922,1.23353218304942
+"33","ES",NA,2022-05-01,"Southern Europe",191,0,Inf
+"34","ES",NA,2022-06-01,"Southern Europe",1419,0,Inf
+"35","ES",NA,2022-07-01,"Southern Europe",3244,0,Inf
+"36","ES",NA,2022-08-01,"Southern Europe",1429,0,Inf
+"37","FI","Between 25% and 30% is Employed",2022-05-01,"Northern Europe",0,7969190,0
+"38","FI","Between 25% and 30% is Employed",2022-06-01,"Northern Europe",4,7969190,0.501933069734816
+"39","FI","Between 25% and 30% is Employed",2022-07-01,"Northern Europe",9,7969190,1.12934940690334
+"40","FI","Between 25% and 30% is Employed",2022-08-01,"Northern Europe",9,7969190,1.12934940690334
+"41","FR","Between 25% and 30% is Employed",2022-05-01,"Western Europe",17,94579132,0.179743666922213
+"42","FR","Between 25% and 30% is Employed",2022-06-01,"Western Europe",481,94579132,5.08568845821084
+"43","FR","Between 25% and 30% is Employed",2022-07-01,"Western Europe",1457,94579132,15.4050895709214
+"44","FR","Between 25% and 30% is Employed",2022-08-01,"Western Europe",934,94579132,9.87532852384393
+"45","HR","Less than 25% is Employed",2022-05-01,"Southern Europe",0,6080104,0
+"46","HR","Less than 25% is Employed",2022-06-01,"Southern Europe",1,6080104,0.164470870892998
+"47","HR","Less than 25% is Employed",2022-07-01,"Southern Europe",10,6080104,1.64470870892998
+"48","HR","Less than 25% is Employed",2022-08-01,"Southern Europe",14,6080104,2.30259219250197
+"49","HU","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",3,14448848,0.207629009593014
+"50","HU","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",25,14448848,1.73024174660845
+"51","HU","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",25,14448848,1.73024174660845
+"52","HU","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",11,14448848,0.761306368507718
+"53","IE","Between 25% and 30% is Employed",2022-05-01,"Northern Europe",2,6774556,0.295222299439255
+"54","IE","Between 25% and 30% is Employed",2022-06-01,"Northern Europe",41,6774556,6.05205713850472
+"55","IE","Between 25% and 30% is Employed",2022-07-01,"Northern Europe",52,6774556,7.67577978542062
+"56","IE","Between 25% and 30% is Employed",2022-08-01,"Northern Europe",33,6774556,4.8711679407477
+"57","IS",NA,2022-05-01,"Northern Europe",0,0,NA
+"58","IS",NA,2022-06-01,"Northern Europe",3,0,Inf
+"59","IS",NA,2022-07-01,"Northern Europe",8,0,Inf
+"60","IS",NA,2022-08-01,"Northern Europe",1,0,Inf
+"61","IT",NA,2022-05-01,"Southern Europe",29,0,Inf
+"62","IT",NA,2022-06-01,"Southern Europe",192,0,Inf
+"63","IT",NA,2022-07-01,"Southern Europe",318,0,Inf
+"64","IT",NA,2022-08-01,"Southern Europe",175,0,Inf
+"65","LT",NA,2022-05-01,"Northern Europe",0,0,NA
+"66","LT",NA,2022-06-01,"Northern Europe",0,0,NA
+"67","LT",NA,2022-07-01,"Northern Europe",0,0,NA
+"68","LT",NA,2022-08-01,"Northern Europe",5,0,Inf
+"69","LU","Between 25% and 30% is Employed",2022-05-01,"Western Europe",0,733111,0
+"70","LU","Between 25% and 30% is Employed",2022-06-01,"Western Europe",5,733111,6.82024959385414
+"71","LU","Between 25% and 30% is Employed",2022-07-01,"Western Europe",25,733111,34.1012479692707
+"72","LU","Between 25% and 30% is Employed",2022-08-01,"Western Europe",17,733111,23.1888486191041
+"73","LV","Between 25% and 30% is Employed",2022-05-01,"Northern Europe",0,3095886,0
+"74","LV","Between 25% and 30% is Employed",2022-06-01,"Northern Europe",2,3095886,0.646018619548653
+"75","LV","Between 25% and 30% is Employed",2022-07-01,"Northern Europe",0,3095886,0
+"76","LV","Between 25% and 30% is Employed",2022-08-01,"Northern Europe",2,3095886,0.646018619548653
+"77","MT","Between 25% and 30% is Employed",2022-05-01,"Southern Europe",1,602515,1.65970971677054
+"78","MT","Between 25% and 30% is Employed",2022-06-01,"Southern Europe",7,602515,11.6179680173938
+"79","MT","Between 25% and 30% is Employed",2022-07-01,"Southern Europe",16,602515,26.5553554683286
+"80","MT","Between 25% and 30% is Employed",2022-08-01,"Southern Europe",7,602515,11.6179680173938
+"81","NL",NA,2022-05-01,"Western Europe",43,0,Inf
+"82","NL",NA,2022-06-01,"Western Europe",320,0,Inf
+"83","NL",NA,2022-07-01,"Western Europe",586,0,Inf
+"84","NL",NA,2022-08-01,"Western Europe",141,0,Inf
+"85","NO",NA,2022-05-01,"Northern Europe",2,0,Inf
+"86","NO",NA,2022-06-01,"Northern Europe",15,0,Inf
+"87","NO",NA,2022-07-01,"Northern Europe",39,0,Inf
+"88","NO",NA,2022-08-01,"Northern Europe",20,0,Inf
+"89","PL","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",1,55563231,0.0179975134995299
+"90","PL","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",12,55563231,0.215970161994359
+"91","PL","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",58,55563231,1.04385578297274
+"92","PL","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",50,55563231,0.899875674976497
+"93","PT","Between 25% and 30% is Employed",2022-05-01,"Southern Europe",199,15585545,12.7682413415764
+"94","PT","Between 25% and 30% is Employed",2022-06-01,"Southern Europe",276,15585545,17.7087166345482
+"95","PT","Between 25% and 30% is Employed",2022-07-01,"Southern Europe",158,15585545,10.1375986531109
+"96","PT","Between 25% and 30% is Employed",2022-08-01,"Southern Europe",177,15585545,11.3566769721559
+"97","RO","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",0,29301750,0
+"98","RO","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",11,29301750,0.375404199407885
+"99","RO","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",11,29301750,0.375404199407885
+"100","RO","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",13,29301750,0.443659508391137
+"101","SE",NA,2022-05-01,"Northern Europe",2,0,Inf
+"102","SE",NA,2022-06-01,"Northern Europe",26,0,Inf
+"103","SE",NA,2022-07-01,"Northern Europe",71,0,Inf
+"104","SE",NA,2022-08-01,"Northern Europe",51,0,Inf
+"105","SI","Between 25% and 30% is Employed",2022-05-01,"Southern Europe",2,2994758,0.667833594567574
+"106","SI","Between 25% and 30% is Employed",2022-06-01,"Southern Europe",7,2994758,2.33741758098651
+"107","SI","Between 25% and 30% is Employed",2022-07-01,"Southern Europe",27,2994758,9.01575352666226
+"108","SI","Between 25% and 30% is Employed",2022-08-01,"Southern Europe",7,2994758,2.33741758098651
+"109","SK","Between 25% and 30% is Employed",2022-05-01,"Eastern Europe",0,8027088,0
+"110","SK","Between 25% and 30% is Employed",2022-06-01,"Eastern Europe",0,8027088,0
+"111","SK","Between 25% and 30% is Employed",2022-07-01,"Eastern Europe",6,8027088,0.747469069729895
+"112","SK","Between 25% and 30% is Employed",2022-08-01,"Eastern Europe",6,8027088,0.747469069729895

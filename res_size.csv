@@ -1,0 +1,117 @@
+"","country_code","pct_small","month","sub-region","cases_by_monthcat","cat_pop","size_cat_rate"
+"1","AT","Between 65% and 80% in Small Cities",2022-05-01,"Western Europe",2,12673495,0.157809664974027
+"2","AT","Between 65% and 80% in Small Cities",2022-06-01,"Western Europe",36,12673495,2.84057396953248
+"3","AT","Between 65% and 80% in Small Cities",2022-07-01,"Western Europe",96,12673495,7.57486391875327
+"4","AT","Between 65% and 80% in Small Cities",2022-08-01,"Western Europe",97,12673495,7.65376875124029
+"5","BE","Less than 65% in Small Cities",2022-05-01,"Western Europe",16,15834698,1.01043922656435
+"6","BE","Less than 65% in Small Cities",2022-06-01,"Western Europe",127,15834698,8.0203613608545
+"7","BE","Less than 65% in Small Cities",2022-07-01,"Western Europe",351,15834698,22.1665105327553
+"8","BE","Less than 65% in Small Cities",2022-08-01,"Western Europe",177,15834698,11.1779839438681
+"9","BG","Less than 65% in Small Cities",2022-05-01,"Eastern Europe",0,10694003,0
+"10","BG","Less than 65% in Small Cities",2022-06-01,"Eastern Europe",3,10694003,0.280531060258726
+"11","BG","Less than 65% in Small Cities",2022-07-01,"Eastern Europe",1,10694003,0.0935103534195754
+"12","BG","Less than 65% in Small Cities",2022-08-01,"Eastern Europe",0,10694003,0
+"13","CH","Greater than 80% in Small Cities",NA,NA,0,10871563,0
+"14","CY","Greater than 80% in Small Cities",NA,NA,0,1257135,0
+"15","CZ","Between 65% and 80% in Small Cities",2022-05-01,"Eastern Europe",1,15475743,0.0646172529486953
+"16","CZ","Between 65% and 80% in Small Cities",2022-06-01,"Eastern Europe",7,15475743,0.452320770640867
+"17","CZ","Between 65% and 80% in Small Cities",2022-07-01,"Eastern Europe",15,15475743,0.969258794230429
+"18","CZ","Between 65% and 80% in Small Cities",2022-08-01,"Eastern Europe",18,15475743,1.16311055307651
+"19","DE",NA,2022-05-01,"Western Europe",53,0,Inf
+"20","DE",NA,2022-06-01,"Western Europe",1071,0,Inf
+"21","DE",NA,2022-07-01,"Western Europe",1619,0,Inf
+"22","DE",NA,2022-08-01,"Western Europe",586,0,Inf
+"23","DK",NA,2022-05-01,"Northern Europe",10,0,Inf
+"24","DK",NA,2022-06-01,"Northern Europe",25,0,Inf
+"25","DK",NA,2022-07-01,"Northern Europe",64,0,Inf
+"26","DK",NA,2022-08-01,"Northern Europe",70,0,Inf
+"27","EE","Between 65% and 80% in Small Cities",2022-05-01,"Northern Europe",0,1924556,0
+"28","EE","Between 65% and 80% in Small Cities",2022-06-01,"Northern Europe",1,1924556,0.519600364967296
+"29","EE","Between 65% and 80% in Small Cities",2022-07-01,"Northern Europe",3,1924556,1.55880109490189
+"30","EE","Between 65% and 80% in Small Cities",2022-08-01,"Northern Europe",6,1924556,3.11760218980378
+"31","EL","Greater than 80% in Small Cities",2022-05-01,"Southern Europe",1,15402922,0.0649227464762855
+"32","EL","Greater than 80% in Small Cities",2022-06-01,"Southern Europe",6,15402922,0.389536478857713
+"33","EL","Greater than 80% in Small Cities",2022-07-01,"Southern Europe",26,15402922,1.68799140838342
+"34","EL","Greater than 80% in Small Cities",2022-08-01,"Southern Europe",19,15402922,1.23353218304942
+"35","ES",NA,2022-05-01,"Southern Europe",191,0,Inf
+"36","ES",NA,2022-06-01,"Southern Europe",1419,0,Inf
+"37","ES",NA,2022-07-01,"Southern Europe",3244,0,Inf
+"38","ES",NA,2022-08-01,"Southern Europe",1429,0,Inf
+"39","FI","Less than 65% in Small Cities",2022-05-01,"Northern Europe",0,7969190,0
+"40","FI","Less than 65% in Small Cities",2022-06-01,"Northern Europe",4,7969190,0.501933069734816
+"41","FI","Less than 65% in Small Cities",2022-07-01,"Northern Europe",9,7969190,1.12934940690334
+"42","FI","Less than 65% in Small Cities",2022-08-01,"Northern Europe",9,7969190,1.12934940690334
+"43","FR","Greater than 80% in Small Cities",2022-05-01,"Western Europe",17,94579132,0.179743666922213
+"44","FR","Greater than 80% in Small Cities",2022-06-01,"Western Europe",481,94579132,5.08568845821084
+"45","FR","Greater than 80% in Small Cities",2022-07-01,"Western Europe",1457,94579132,15.4050895709214
+"46","FR","Greater than 80% in Small Cities",2022-08-01,"Western Europe",934,94579132,9.87532852384393
+"47","HR","Between 65% and 80% in Small Cities",2022-05-01,"Southern Europe",0,6080104,0
+"48","HR","Between 65% and 80% in Small Cities",2022-06-01,"Southern Europe",1,6080104,0.164470870892998
+"49","HR","Between 65% and 80% in Small Cities",2022-07-01,"Southern Europe",10,6080104,1.64470870892998
+"50","HR","Between 65% and 80% in Small Cities",2022-08-01,"Southern Europe",14,6080104,2.30259219250197
+"51","HU","Between 65% and 80% in Small Cities",2022-05-01,"Eastern Europe",3,14448848,0.207629009593014
+"52","HU","Between 65% and 80% in Small Cities",2022-06-01,"Eastern Europe",25,14448848,1.73024174660845
+"53","HU","Between 65% and 80% in Small Cities",2022-07-01,"Eastern Europe",25,14448848,1.73024174660845
+"54","HU","Between 65% and 80% in Small Cities",2022-08-01,"Eastern Europe",11,14448848,0.761306368507718
+"55","IE","Between 65% and 80% in Small Cities",2022-05-01,"Northern Europe",2,6774556,0.295222299439255
+"56","IE","Between 65% and 80% in Small Cities",2022-06-01,"Northern Europe",41,6774556,6.05205713850472
+"57","IE","Between 65% and 80% in Small Cities",2022-07-01,"Northern Europe",52,6774556,7.67577978542062
+"58","IE","Between 65% and 80% in Small Cities",2022-08-01,"Northern Europe",33,6774556,4.8711679407477
+"59","IS",NA,2022-05-01,"Northern Europe",0,0,NA
+"60","IS",NA,2022-06-01,"Northern Europe",3,0,Inf
+"61","IS",NA,2022-07-01,"Northern Europe",8,0,Inf
+"62","IS",NA,2022-08-01,"Northern Europe",1,0,Inf
+"63","IT",NA,2022-05-01,"Southern Europe",29,0,Inf
+"64","IT",NA,2022-06-01,"Southern Europe",192,0,Inf
+"65","IT",NA,2022-07-01,"Southern Europe",318,0,Inf
+"66","IT",NA,2022-08-01,"Southern Europe",175,0,Inf
+"67","LI","Greater than 80% in Small Cities",NA,NA,0,55840,0
+"68","LT",NA,2022-05-01,"Northern Europe",0,0,NA
+"69","LT",NA,2022-06-01,"Northern Europe",0,0,NA
+"70","LT",NA,2022-07-01,"Northern Europe",0,0,NA
+"71","LT",NA,2022-08-01,"Northern Europe",5,0,Inf
+"72","LU","Greater than 80% in Small Cities",2022-05-01,"Western Europe",0,733111,0
+"73","LU","Greater than 80% in Small Cities",2022-06-01,"Western Europe",5,733111,6.82024959385414
+"74","LU","Greater than 80% in Small Cities",2022-07-01,"Western Europe",25,733111,34.1012479692707
+"75","LU","Greater than 80% in Small Cities",2022-08-01,"Western Europe",17,733111,23.1888486191041
+"76","LV","Between 65% and 80% in Small Cities",2022-05-01,"Northern Europe",0,3095886,0
+"77","LV","Between 65% and 80% in Small Cities",2022-06-01,"Northern Europe",2,3095886,0.646018619548653
+"78","LV","Between 65% and 80% in Small Cities",2022-07-01,"Northern Europe",0,3095886,0
+"79","LV","Between 65% and 80% in Small Cities",2022-08-01,"Northern Europe",2,3095886,0.646018619548653
+"80","MT","Greater than 80% in Small Cities",2022-05-01,"Southern Europe",1,602515,1.65970971677054
+"81","MT","Greater than 80% in Small Cities",2022-06-01,"Southern Europe",7,602515,11.6179680173938
+"82","MT","Greater than 80% in Small Cities",2022-07-01,"Southern Europe",16,602515,26.5553554683286
+"83","MT","Greater than 80% in Small Cities",2022-08-01,"Southern Europe",7,602515,11.6179680173938
+"84","NL",NA,2022-05-01,"Western Europe",43,0,Inf
+"85","NL",NA,2022-06-01,"Western Europe",320,0,Inf
+"86","NL",NA,2022-07-01,"Western Europe",586,0,Inf
+"87","NL",NA,2022-08-01,"Western Europe",141,0,Inf
+"88","NO",NA,2022-05-01,"Northern Europe",2,0,Inf
+"89","NO",NA,2022-06-01,"Northern Europe",15,0,Inf
+"90","NO",NA,2022-07-01,"Northern Europe",39,0,Inf
+"91","NO",NA,2022-08-01,"Northern Europe",20,0,Inf
+"92","PL","Between 65% and 80% in Small Cities",2022-05-01,"Eastern Europe",1,55563231,0.0179975134995299
+"93","PL","Between 65% and 80% in Small Cities",2022-06-01,"Eastern Europe",12,55563231,0.215970161994359
+"94","PL","Between 65% and 80% in Small Cities",2022-07-01,"Eastern Europe",58,55563231,1.04385578297274
+"95","PL","Between 65% and 80% in Small Cities",2022-08-01,"Eastern Europe",50,55563231,0.899875674976497
+"96","PT","Greater than 80% in Small Cities",2022-05-01,"Southern Europe",199,15585545,12.7682413415764
+"97","PT","Greater than 80% in Small Cities",2022-06-01,"Southern Europe",276,15585545,17.7087166345482
+"98","PT","Greater than 80% in Small Cities",2022-07-01,"Southern Europe",158,15585545,10.1375986531109
+"99","PT","Greater than 80% in Small Cities",2022-08-01,"Southern Europe",177,15585545,11.3566769721559
+"100","RO","Between 65% and 80% in Small Cities",2022-05-01,"Eastern Europe",0,29301750,0
+"101","RO","Between 65% and 80% in Small Cities",2022-06-01,"Eastern Europe",11,29301750,0.375404199407885
+"102","RO","Between 65% and 80% in Small Cities",2022-07-01,"Eastern Europe",11,29301750,0.375404199407885
+"103","RO","Between 65% and 80% in Small Cities",2022-08-01,"Eastern Europe",13,29301750,0.443659508391137
+"104","SE",NA,2022-05-01,"Northern Europe",2,0,Inf
+"105","SE",NA,2022-06-01,"Northern Europe",26,0,Inf
+"106","SE",NA,2022-07-01,"Northern Europe",71,0,Inf
+"107","SE",NA,2022-08-01,"Northern Europe",51,0,Inf
+"108","SI","Greater than 80% in Small Cities",2022-05-01,"Southern Europe",2,2994758,0.667833594567574
+"109","SI","Greater than 80% in Small Cities",2022-06-01,"Southern Europe",7,2994758,2.33741758098651
+"110","SI","Greater than 80% in Small Cities",2022-07-01,"Southern Europe",27,2994758,9.01575352666226
+"111","SI","Greater than 80% in Small Cities",2022-08-01,"Southern Europe",7,2994758,2.33741758098651
+"112","SK","Greater than 80% in Small Cities",2022-05-01,"Eastern Europe",0,8027088,0
+"113","SK","Greater than 80% in Small Cities",2022-06-01,"Eastern Europe",0,8027088,0
+"114","SK","Greater than 80% in Small Cities",2022-07-01,"Eastern Europe",6,8027088,0.747469069729895
+"115","SK","Greater than 80% in Small Cities",2022-08-01,"Eastern Europe",6,8027088,0.747469069729895
+"116","UK","Less than 65% in Small Cities",NA,NA,0,95624460,0

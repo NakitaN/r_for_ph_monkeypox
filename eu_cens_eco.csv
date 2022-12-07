@@ -1,0 +1,33 @@
+"","country_code","eco_pop","group_eco_pop","count_eco_pop","group_eco_pct","pct_employ"
+"1","AT","employed",4019408,12673495,0.317150714936961,"Greater than 30% is Employed"
+"2","BE","employed",4432971,15834698,0.279952986788886,"Between 25% and 30% is Employed"
+"3","BG","employed",2834756,10694003,0.265079035418262,"Between 25% and 30% is Employed"
+"4","CH","employed",4112390,10871563,0.378270355421755,"Greater than 30% is Employed"
+"5","CY","employed",371244,1257135,0.295309572957558,"Between 25% and 30% is Employed"
+"6","CZ","employed",4575788,15475743,0.295674850635604,"Between 25% and 30% is Employed"
+"7","DE","employed",0,0,NA,NA
+"8","DK","employed",0,0,NA,NA
+"9","EE","employed",561138,1924556,0.291567509597019,"Between 25% and 30% is Employed"
+"10","EL","employed",3727633,15402922,0.242008172215635,"Less than 25% is Employed"
+"11","ES","employed",0,0,NA,NA
+"12","FI","employed",2325679,7969190,0.291833799921949,"Between 25% and 30% is Employed"
+"13","FR","employed",26841266,94579132,0.283796916216148,"Between 25% and 30% is Employed"
+"14","HR","employed",1503633,6080104,0.247303829013451,"Less than 25% is Employed"
+"15","HU","employed",3942723,14448848,0.272874557196532,"Between 25% and 30% is Employed"
+"16","IE","employed",1778400,6774556,0.262511668661385,"Between 25% and 30% is Employed"
+"17","IS","employed",0,0,NA,NA
+"18","IT","employed",0,0,NA,NA
+"19","LI","employed",19144,55840,0.342836676217765,"Greater than 30% is Employed"
+"20","LT","employed",0,0,NA,NA
+"21","LU","employed",205561,733111,0.28039546535245,"Between 25% and 30% is Employed"
+"22","LV","employed",833493,3095886,0.269225998631733,"Between 25% and 30% is Employed"
+"23","MT","employed",171855,602515,0.285229413375601,"Between 25% and 30% is Employed"
+"24","NL","employed",0,0,NA,NA
+"25","NO","employed",0,0,NA,NA
+"26","PL","employed",15428946,55563231,0.277682663918518,"Between 25% and 30% is Employed"
+"27","PT","employed",4361187,15585545,0.27982255352636,"Between 25% and 30% is Employed"
+"28","RO","employed",8507708,29301750,0.290348119139642,"Between 25% and 30% is Employed"
+"29","SE","employed",0,0,NA,NA
+"30","SI","employed",835776,2994758,0.279079645166655,"Between 25% and 30% is Employed"
+"31","SK","employed",2186967,8027088,0.272448364836663,"Between 25% and 30% is Employed"
+"32","UK","employed",30008630,95624460,0.313817510708034,"Greater than 30% is Employed"
