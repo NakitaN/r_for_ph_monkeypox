@@ -1,0 +1,105 @@
+---
+title: "Milestone 6"
+output: html_document
+date: '2022-12-07'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(stringr)
+library(lubridate)
+library(knitr)
+library(formattable)
+library(plotly)
+```
+
+```{r}
+rate_region_mp <-read_csv("~/r_for_ph_monkeypox/rate_region_mp.csv")%>%
+  select(-"...1")
+pivot_rate_region_mp <-read_csv("~/r_for_ph_monkeypox/pivot_rate_region_mp.csv")%>%
+  select(-"...1")
+eu_cens_demo<- read_csv("~/r_for_ph_monkeypox/eu_cens_demo.csv")%>%
+  select(-"...1")
+res_size<- read_csv("~/r_for_ph_monkeypox/res_size.csv")%>%
+  select(-"...1")
+eu_cens_eco<- read_csv("~/r_for_ph_monkeypox/eu_cens_eco.csv")%>%
+  select(-"...1")
+emp_mp<- read_csv("~/r_for_ph_monkeypox/emp_mp.csv")%>%
+  select(-"...1")
+
+
+```
+\newpage
+## Problem
+Monkeypox is a viral infection that spreads from human to human and can lead to medical complications particularly in new-born babies, children and people with underlying conditions. A multi-country outbreak of monkeypox has been reported in places where the virus has not been typically found before. Our objective is to understand how case rates differ by month for different regions within the EU and to determine if there is a relationship between certain demographics and MPX rates in order to prepare appropriate responses to avert further spread.
+
+## Methods
+We will utilize four datasets and R statistical software for analysis. First, the monkeypox case data file from that contains information on the number of monkeypox cases reported by EU/EEA countries or collected throughout epidemiologic intelligence at European Centre for Disease Prevention and Control. Second, the population denominator from Eurostat that indicates the number of persons having their usual residence in a country on 1 January of the respective year. Third, world region which includes country names linked to region, subregion, country code and more. Lastly, European statistical system census data file from 2011 European census which includes country code, age, education, economy and population. 
+
+```{r}
+ggplot(rate_region_mp, aes(x=month, y=sum_rate, fill = as.factor(month))) + 
+  geom_bar(stat = "identity")+
+  facet_wrap(~ `sub-region`) +
+  labs(title = "Figure 1: Monthly Monkey Rates by EU region ",
+       x= "Month",
+       y ="Case rates", fill = "Month")+
+  theme(
+    plot.title = element_text(hjust = 0.5))+
+  scale_fill_hue(labels = c("May", "June", "July","August"))
+```
+
+Figure 1 shows the case rates in Europe by region in the months May to August 2022. 
+In the month of July, monkeypox case rates were highest across all regions in Europe.
+In the month of May, monkeypox case rates were lowest across all regions in Europe.
+```{r}
+library(formattable)
+formattable(pivot_rate_region_mp, caption = "Table 1: Monkeypox Rates in EU Region in May-Aug 2022", 
+            align=c("l","c","c","c","r"),
+            list("Western Europe"= (color_tile("white", "orange"))))
+```
+
+The table 1 shows the case rates in different European regions between the months of May and August 2022. Western Europe had the highest case rates in the month of July.
+```{r}
+plot_ly(res_size, 
+        x = ~month, 
+        y = ~size_cat_rate, 
+        type = "bar", 
+        color = ~pct_small) %>%
+  layout(title = "Figure 2: MPX Case Rates in Europe by Percent of Population
+  Living in Small Cities, May-August 2022",  
+         xaxis = list(title = "Month"), 
+         yaxis = list(title = "Case Rate per 1000000"),
+  legend = list(x = 100, y = 0.5))
+```
+Figure 2 shows the case rates in Europe by the percent of the population living in small cities between the months of May to August 2022. The monthly monkeypox case rates peaked in July 2022 and paticularly in countries where greater than 80% of the population lived in small cities.
+
+```{r}
+plot_ly(
+   emp_mp,
+   x= ~month,
+   y= ~size_emp_rate,
+   type = "bar",
+   color = ~pct_employ) %>%
+   layout(title = "Figure 3: MPX Case Rates in Europe by Percent Employed, May-August 2022",
+  xaxis = list(title = "Month"),
+  yaxis = list(title = "Case Rate per 1000000"),
+  legend = list(x = 100, y = 0.5))
+```
+
+Figure 3 shows the case rates in Europe by the percent of emplyed population between the months of May to August 2022.The monthly monkeypox case rates between May 2022 and August 2022 were highest in countries where between 25% and 30% of the population are employed.
+
+## Discussion
+Our findings reveal that highest case rates of monkey pox occurred in the month of July 2022 across all regions of Europe. The worst hit region was Western Europe. Countries in which greater than 80% of population was living in small cities were affected the most. Also, countries where between 25% and 30% of the population are employed registered the highest rates of monkey pox cases.
+
+## Hypothesis
+1.	Is there a difference between monkeypox cases by region in the EU? 
+Yes, our findings reveal that there is a difference between monkeypox cases by region in the EU.
+2.	Is there a difference between country level monkeypox case rates by certain demographic 
+Yes, our findings reveal that there are variations between country level monkeypox case rates by population size and economic activity.
+
