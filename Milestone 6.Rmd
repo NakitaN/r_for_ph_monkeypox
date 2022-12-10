@@ -59,12 +59,13 @@ In the month of July, monkeypox case rates were highest across all regions in Eu
 In the month of May, monkeypox case rates were lowest across all regions in Europe.
 ```{r}
 library(formattable)
-formattable(pivot_rate_region_mp, caption = "Table 1: Monkeypox Rates in EU Region in May-Aug 2022", 
+formattable(pivot_rate_region_mp, caption = "Table 1: Monkeypox Rates in EU Region in May-Aug 2022",
             align=c("l","c","c","c","r"),
-            list("Western Europe"= (color_tile("white", "orange"))))
+            list(area(col = c("Eastern Europe", "Northern Europe", "Southern Europe", "Western Europe")) ~ (color_tile("white", "orange"))))
 ```
 
-The table 1 shows the case rates in different European regions between the months of May and August 2022. Western Europe had the highest case rates in the month of July.
+The table 1 shows the case rates in different European regions between the months of May and August 2022. Western Europe had the highest case rates in the month of July. Each month, Eastern Europe had lower rates of monkeypox compared to all other regions of Europe over the same time periods.
+
 ```{r}
 plot_ly(res_size, 
         x = ~month, 
